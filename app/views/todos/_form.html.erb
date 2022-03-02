@@ -1,0 +1,25 @@
+<%= form_with(model: todo, id: "#{dom_id(todo)}_form") do |form| %>
+  <% if todo.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
+
+      <ul>
+        <% todo.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-6">
+    <%= form.label :title, class: "sr-only" %>
+    <div class="relative">
+      <%= form.text_field :title, class: "block shadow-sm rounded-full border border-gray-200 outline-none px-6 py-4 w-full focus:border-sky-300 focus:outline-none focus:ring-4 focus:ring-sky-50 text-lg placeholder:text-gray-400", placeholder: "Add a new todo" %>
+
+      <div class="absolute top-0 right-0">
+        <%= form.submit class: "mt-px rounded-full py-4 px-5 bg-sky-500 text-white font-medium cursor-pointer border-2 border-sky-500 hover:bg-sky-600 hover:border-sky-600" %>
+      </div>
+    </div>
+  </div>
+
+<% end %>

@@ -1,0 +1,12 @@
+<div class="mx-auto max-w-3xl mt-24">
+  <div class="mb-6">
+    <h1 class="font-bold text-4xl">Turbo Todos</h1>
+  </div>
+
+  <%= render "form", todo: Todo.new %>
+
+  <%= turbo_stream_from "todos" %>
+  <div id="todos" class="divide-y list-none">
+    <%= render @todos %>
+  </div>
+</div>
