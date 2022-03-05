@@ -23,3 +23,7 @@ At its core, Turbo sends HTML code over the request cycle instead of something l
 - **Turbo Streams** - deliver page changes over WebSocket, SSE, or in response to form submissions using just HTML and a set of CRUD-like actions.
 - **Turbo Native** - lets your majestic monolith form the center of your native iOS and Android apps, with seamless transitions between web and native sections.
 For this guide, I'll be focusing on the first three in this list.
+
+__➡️ Continue the guide__
+
+Read the full guide [here](https://web-crunch.com/posts/digging-into-turbo-with-ruby-on-rails-7) or watch the guide [here](https://youtu.be/0CSGsHnci2I)
